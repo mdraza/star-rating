@@ -4,14 +4,20 @@ const containerStyle = {
   display: "flex",
   alignItems: "center",
   gap: "20px",
-  margin: "50px",
+  padding: "20px",
 };
 
 const starContainerStyle = {
   display: "flex",
 };
 
-const App = ({ maxRating = 5, color = "#fcc419", size = 50, message = [] }) => {
+const App = ({
+  maxRating = 5,
+  color = "#fcc419",
+  size = 50,
+  message = [],
+  onSetRating,
+}) => {
   const [rating, setRating] = useState(0);
   const [tempRating, setTempRating] = useState(0);
 
